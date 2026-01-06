@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Mix Agency | Data-Driven Paid Media Marketing</title>
+    <meta name="description" content="Stop Guessing. Start Scaling. We turn Ad Spend into Revenue using Data-Driven Funnels on Meta, Google & TikTok.">
+    <meta name="keywords" content="Digital Marketing, Paid Media, Meta Ads, Google Ads, TikTok Ads, ROI, Growth Agency">
+
+    <!-- React & ReactDOM -->
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel -->
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+    <script>
+        // Prevent Chart.js from clashing with React component state if needed, though usually fine globally
+        const ChartJS = window.Chart;
+    </script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --bg-deep: #0B0E14;
+            --bg-card: rgba(30, 41, 59, 0.4);
+            --primary-neon: #00FF94;
+            --secondary-purple: #8B5CF6;
+            --accent-cyan: #06B6D4;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-deep)] text-[var(--text-main)] font-sans antialiased overflow-x-hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            @apply tracking-tight;
+        }
+    }
+
+    @layer components {
+        .glass-panel {
+            @apply bg-[var(--bg-card)] backdrop-blur-md border border-white/10 shadow-xl;
+        }
+        .text-gradient {
+            @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--secondary-purple)] to-[var(--accent-cyan)];
+        }
+        .btn-neon {
+            @apply bg-[var(--primary-neon)] text-black font-bold px-6 py-3 rounded-lg hover:bg-[#33ffaa] transition-all duration-300 shadow-[0_0_15px_rgba(0,255,148,0.3)] hover:shadow-[0_0_25px_rgba(0,255,148,0.5)];
+        }
+        .btn-glass {
+            @apply bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 text-white px-6 py-3 rounded-lg transition-all duration-300;
+        }
+        .nav-link {
+            @apply text-sm font-medium text-gray-300 hover:text-[var(--primary-neon)] transition-colors cursor-pointer;
+        }
+    }
+
+    @layer utilities {
+        .animation-delay-200 { animation-delay: 200ms; }
+        .animation-delay-400 { animation-delay: 400ms; }
+        .animation-delay-600 { animation-delay: 600ms; }
+    }
+    
+    /* Custom Animations */
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Components -->
+    <script type="text/babel" src="components/Navbar.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/RealityCheck.js"></script>
+    <script type="text/babel" src="components/PerformanceShowcase.js"></script>
+    <script type="text/babel" src="components/Platforms.js"></script>
+    <script type="text/babel" src="components/Pricing.js"></script>
+    <script type="text/babel" src="components/Timeline.js"></script>
+    <script type="text/babel" src="components/LeadForm.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    
+    <!-- Main App -->
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
